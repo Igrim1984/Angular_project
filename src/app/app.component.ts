@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular_project';
+  title = 'Lista Zadań';
+
+  get footer(): string {
+    return ' © Lista zadań, All rights reserved.'
+  }
+
+  getDate():Date {
+    return new Date();
+  }
 }
