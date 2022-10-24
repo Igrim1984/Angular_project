@@ -1,7 +1,7 @@
 <div class="container">
   <nav class="row">
     <div class="nav-wrapper">
-      <span class="brand-logo center">{{ title | uppercase }}</span>
+      <span class="brand-logo center">{{ config?.['title'] | uppercase }}</span>
     </div>
   </nav>
 
@@ -43,11 +43,11 @@
 
   <footer class="page-footer mt-5">
     <div class="footer-copyright">
-      <div class="container">{{ getDate() | date: "yyyy" }} {{ footer }}</div>
+      <div class="container">{{ config?.['date'] | date: "yyyy" }} {{ config?.['footer'] }}</div>
     </div>
     <div class="row">
       <p class="col s4 offset-s8">
-        Data i godzina: {{ getDate() | date: "medium":"":"pl" }}
+        Aktualna data: {{ config?.['date'] | date: "fullDate":"":"pl" }}
       </p>
     </div>
   </footer>
